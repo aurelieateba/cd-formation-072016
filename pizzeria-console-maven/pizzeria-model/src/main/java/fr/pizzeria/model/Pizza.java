@@ -1,17 +1,32 @@
 package fr.pizzeria.model;
 
 import java.util.Arrays;
+import java.util.Enumeration;
 
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
 public class Pizza {
 
+	
 	private static int NbPizza;
-
+    @Id
+    @GeneratedValue	
+	private Integer id;
+    
 	private String code;
 	private String nom;
-	private double prix;
+	private Double prix;
+	@Enumerated
 	private CategoriePizza catpizza;
 	
 	
+	
+
 
 	public CategoriePizza getCatpizza() {
 		return catpizza;
@@ -46,6 +61,10 @@ public class Pizza {
 	}
 	
 	
+	
+	public Pizza() {
+		super();
+	}
 
 	public Pizza(String code, String nom, double prix, CategoriePizza catpizza) {
 		super();

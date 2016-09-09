@@ -22,8 +22,8 @@ public class Menu {
 	
 	
 	public Menu(IhmHelper helper) {
-//		this.actions.put(1, new ListerPizzaAction(helper));
-//		this.actions.put(2, new AjouterPizzaAction(helper));
+		this.actions.put(1, new ListerPizzaAction(helper));
+		this.actions.put(2, new AjouterPizzaAction(helper));
 //		this.actions.put(3, new ModifierPizzaAction(helper));
 //		this.actions.put(4, new SupprimerPizzaAction(helper));
 //		this.actions.put(5, new ActionDebiterClient(helper));
@@ -31,6 +31,7 @@ public class Menu {
 //		this.actions.put(7, new ActionListerClients(helper));
 //		this.actions.put(8, new ListePizzaParCategorie(helper));
 //		this.actions.put(9, new AfficherLaPizzaAuTarifLePlusEleve(helper));
+		this.actions.put(10, new ExporterJdbc(helper));
 		
 		Reflections reflections = new Reflections();
 
@@ -43,9 +44,9 @@ public class Menu {
 		
 		
 		// on parcours l'ensemble des classes annotées
-		annotated.forEach(action -> {
+		//annotated.forEach(action -> {
 		// pour chaque action, la mettre dans la liste d'action
-			try {
+			/*try {
 				
 				actions.put(l.getAndIncrement(),(Action) action.getConstructor(IhmHelper.class).newInstance(helper));
 			
@@ -54,11 +55,7 @@ public class Menu {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		});
-		
-		 
-		
-		
+		});*/
 		this.ihmHelper = helper;
 	}
 

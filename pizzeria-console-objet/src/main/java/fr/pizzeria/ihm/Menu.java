@@ -22,7 +22,7 @@ public class Menu {
 	
 	
 	public Menu(IhmHelper helper) {
-//		this.actions.put(1, new ListerPizzaAction(helper));
+		this.actions.put(1, new ListerPizzaAction(helper));
 //		this.actions.put(2, new AjouterPizzaAction(helper));
 //		this.actions.put(3, new ModifierPizzaAction(helper));
 //		this.actions.put(4, new SupprimerPizzaAction(helper));

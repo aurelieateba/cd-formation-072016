@@ -21,8 +21,9 @@ public class PizzeriaAdminConsoleApp {
 		Stockage<Pizza> stockagePizza = new StockagePizzaJdbc();
 		Stockage<Client> stockageClient = new StockageClientMap();
 
-		IhmHelper helper = new IhmHelper(stockagePizza, stockageClient, scanner);			
-	
+		IhmHelper helper = new IhmHelper(stockagePizza, stockageClient, scanner);
+				
+		
 		//Afficher la date
 		Calendar calendardate = Calendar.getInstance();
 		DateFormatUtils.format(calendardate, "dd/MM  '-' HH:mm ");

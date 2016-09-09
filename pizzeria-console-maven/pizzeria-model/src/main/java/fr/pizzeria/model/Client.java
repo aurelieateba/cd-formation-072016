@@ -35,7 +35,7 @@ public class Client {
 		 }
 		}
 	
-	public void crediterCompte(int i) throws CreditException {
+	public void crediterCompte(double i) throws CreditException {
 		Double nouveauSolde = this.solde + i;
 		
 		 if (nouveauSolde> 5000) {
